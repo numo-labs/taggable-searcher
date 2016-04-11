@@ -6,7 +6,8 @@
   "scripts": {
     "nocov": "mocha",
     "test": "semistandard && npm run coverage",
-    "coverage": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/*.js --report lcov -- -R spec"
+    "coverage": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/*.js --report lcov -- -R spec",
+    "lint": "semistandard"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,7 @@
   "homepage": "https://github.com/numo-labs/taggable-searcher",
   "dependencies": {
     "async": "^2.0.0-rc.3",
-    "lodash.chunk": "^4.0.5",
-    "lodash.isinteger": "^4.0.2",
-    "lodash.mergewith": "^4.3.4"
+    "lodash": "^4.9.0"
   },
   "devDependencies": {
     "aws-sdk": "^2.3.2",
