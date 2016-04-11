@@ -55,6 +55,18 @@ taggy.searchByTags(['geo:geonames:123', 'amenity:general:pool'], {...options}, f
 ...
 ```
 
+#### 3) Getting tags based on data in the doc field.
+This query will return all tags with the given data in the doc field
+
+```js
+var taggy = require('taggable-searcher');
+...
+taggy.searchByDoc(['"_id":"geo:geonames.2267057"'], {...options}, function (err, result) {
+  // Handle result
+});
+...
+```
+
 ### options
 Following is a list of options you can pass in the functions.
 
