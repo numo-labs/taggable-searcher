@@ -3,6 +3,7 @@ var index = require('../index');
 var config = require('../config.json');
 
 describe('Integration test for multiple queries', function () {
+  this.timeout(5000);
   index.init(config.cloudsearch.endpoint);
   it('should return results for an existing list of names', function (done) {
     index.searchByName(['spain', 'greece'], null, function (err, data) {
@@ -18,7 +19,7 @@ describe('Integration test for multiple queries', function () {
       });
     });
   });
-  it.only('should return merge results when chunking', function (done) {
+  it('should return merge results when chunking', function (done) {
     index.searchByName(['spain', 'greece'], {idPrefix: 'geo'}, function (err, data) {
       if (err) return done(err);
       assert.equal(data.hits.found, 1);

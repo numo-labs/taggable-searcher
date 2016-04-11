@@ -26,7 +26,13 @@ function searchByTags (tags, options, callback) {
   return queries.queryTag(tags, sanitize.options(options), cloudSearchDomain, callback);
 }
 
+function searchByDoc (words, options, callback) {
+  checkInit();
+  return queries.queryDoc(words, sanitize.options(options), cloudSearchDomain, callback);
+}
+
 module.exports.init = init;
 module.exports.searchById = searchById;
 module.exports.searchByName = searchByName;
 module.exports.searchByTags = searchByTags;
+module.exports.searchByDoc = searchByDoc;
