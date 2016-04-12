@@ -1,10 +1,10 @@
 var assert = require('assert');
 var index = require('../index');
-var config = require('../config.json');
+var endpoint = process.env.CLOUDSEARCH_ENDPOINT;
 
 describe('Integration test for multiple queries', function () {
   this.timeout(5000);
-  index.init(config.cloudsearch.endpoint);
+  index.init(endpoint);
   it('should return results for an existing list of names', function (done) {
     index.searchByName(['spain', 'greece'], {size: 1}, function (err, data) {
       if (err) return done(err);
