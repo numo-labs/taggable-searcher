@@ -6,9 +6,9 @@ describe('Integration test for multiple queries', function () {
   this.timeout(5000);
   index.init(config.cloudsearch.endpoint);
   it('should return results for an existing list of names', function (done) {
-    index.searchByName(['spain', 'greece'], null, function (err, data) {
+    index.searchByName(['spain', 'greece'], {size: 1}, function (err, data) {
       if (err) return done(err);
-      assert.equal(data.hits.found, 1);
+      assert.equal(data.hits.found, 3);
       assert.equal(data.hits.hit.length, 1);
       assert.equal(data.hits.start, 0);
       index.searchByTags(data.hits.hit[0].id, {size: 10, start: 3, idPrefix: 'hotel:NE'}, function (err, data) {
@@ -19,7 +19,7 @@ describe('Integration test for multiple queries', function () {
       });
     });
   });
-  it.only('should return merge results when chunking', function (done) {
+  it('should return merge results when chunking', function (done) {
     index.searchByName(['spain', 'greece'], {idPrefix: 'geo', size: 1}, function (err, data) {
       if (err) return done(err);
       assert.equal(data.hits.found, 3);
