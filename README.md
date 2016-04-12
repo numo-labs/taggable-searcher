@@ -55,6 +55,19 @@ taggy.searchByTags(['geo:geonames:123', 'amenity:general:pool'], {...options}, f
 ...
 ```
 
+**Complex example**
+Let's say you want to search for all tags tagged by _geo:geonames:greece_ **OR** _geo:geonames:spain_ but with _amenity:wifi_ **AND** _amenity:pool_.
+
+```js
+var taggy = require('taggable-searcher');
+...
+taggy.searchByTags([['geo:geonames:greece', 'geo.geonames.spain'], 'amenity:wifi', 'amenity:pool'], { operator: 'and'}, function (err, result) {
+  // Handle result
+});
+...
+```
+As you can see you can wrap all the 'or' groups in sub-array. You can nest this as deep as you want to.
+
 #### 3) Getting tags based on data in the doc field.
 This query will return all tags with the given data in the doc field
 
