@@ -18,7 +18,7 @@ Some of the queries we invoke take a while to come back with results. An example
 
 `npm install --save-dev git+ssh://git@github.com:numo-labs/taggable-searcher.git`
 
-### Usage by example
+### Queries
 #### 1) Getting tags by id
 This query will return all tags based on a given list of ids.
 
@@ -80,7 +80,7 @@ taggy.searchByDoc(['"_id":"geo:geonames.2267057"'], {...options}, function (err,
 ...
 ```
 
-### options
+#### options
 Following is a list of options you can pass in the functions.
 
 | key | type | default | description |
@@ -89,3 +89,30 @@ Following is a list of options you can pass in the functions.
 | start | Integer | 0 | Specifies the offset of the first search hit you want to return. Note that the result set is zero-based; the first result is at index 0. |
 | operator | String | or | The query operator |
 | idPrefix | String | empty | E.g 'hotel', 'hotel:mhid', 'geo' |
+
+### Suggestions
+
+#### 1) Getting suggestions for id
+This will return suggestions based on part of an id.
+
+```js
+taggy.suggestId('hotel:mhid', {...options}, function (err, result) {
+  // Handle result
+});
+```
+
+#### 2) Getting suggestions for displayname
+This will return suggestions based on part of a display name.
+
+```js
+taggy.suggestName('spa', {...options}, function (err, result) {
+  // Handle result
+});
+```
+#### options
+Following is a list of options you can pass in the functions.
+
+| key | type | default | description |
+| --- | ---- | ------- | ----------- |
+| size | Integer | 10 | The amount our suggestions you want back. |
+| minLetters | Integer | empty | The min length of your word before it hits cloudsearch |
