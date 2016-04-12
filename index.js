@@ -3,6 +3,11 @@ var sanitize = require('./lib/sanitizer');
 var queries = require('./lib/queries');
 var cloudSearchDomain;
 
+var operator = {
+  'AND': 'and',
+  'OR': 'or'
+};
+
 function init (endpoint) {
   cloudSearchDomain = new AWS.CloudSearchDomain({endpoint: endpoint});
 }
@@ -36,3 +41,4 @@ module.exports.searchById = searchById;
 module.exports.searchByName = searchByName;
 module.exports.searchByTags = searchByTags;
 module.exports.searchByDoc = searchByDoc;
+module.exports.operator = operator;
