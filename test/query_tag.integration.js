@@ -12,4 +12,12 @@ describe('Integration test for query tag', function () {
       done();
     });
   });
+  it('should return results for a single name', function (done) {
+    index.searchByTags(['geo:geonames.2510769', 'geo:geonames.6697810'], { size: 10, start: 5 }, function (err, data) {
+      if (err) return done(err);
+      assert.equal(data.hits.hit.length, 10);
+      assert.equal(data.hits.start, 5);
+      done();
+    });
+  });
 });

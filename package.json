@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/numo-labs/taggable-searcher",
   "dependencies": {
-    "async": "^2.0.0-rc.3",
-    "lodash": "^4.9.0"
+    "lodash.isarray": "^4.0.0",
+    "lodash.isinteger": "^4.0.2"
   },
   "devDependencies": {
     "aws-sdk": "^2.3.2",
