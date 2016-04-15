@@ -1,4 +1,3 @@
-var AWS = require('aws-sdk');
 var sanitize = require('./lib/sanitizer');
 var queries = require('./lib/queries');
 var suggestions = require('./lib/suggestions');
@@ -9,7 +8,8 @@ var operator = {
   'OR': 'or'
 };
 
-function init (endpoint) {
+function init (endpoint, AWS_instance) {
+  var AWS = AWS_instance || require('aws-sdk');
   cloudSearchDomain = new AWS.CloudSearchDomain({endpoint: endpoint});
 }
 
