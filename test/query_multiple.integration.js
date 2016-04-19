@@ -11,7 +11,7 @@ describe('Integration test for multiple queries', function () {
       assert.equal(data.hits.found, 3);
       assert.equal(data.hits.hit.length, 1);
       assert.equal(data.hits.start, 0);
-      index.searchByTags(data.hits.hit[0].id, {size: 10, start: 3, idPrefix: 'hotel:NE'}, function (err, data) {
+      index.searchByTags(data.hits.hit[0].id, {size: 10, start: 3, idPrefix: ['hotel:NE', 'hotel:mhid']}, function (err, data) {
         if (err) return done(err);
         assert.equal(data.hits.hit.length, 10);
         assert.equal(data.hits.start, 3);
@@ -19,4 +19,4 @@ describe('Integration test for multiple queries', function () {
       });
     });
   });
-});
+});// (or (phrase field=geotags 'geo:geonames.2510769') (or (prefix field=id 'hotel:NE')(prefix field=id 'hotel:mhid')))

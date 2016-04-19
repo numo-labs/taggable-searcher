@@ -88,7 +88,7 @@ Following is a list of options you can pass in the functions.
 | size | Integer | 1000 | The amount our results you want back. |
 | start | Integer | 0 | Specifies the offset of the first search hit you want to return. Note that the result set is zero-based; the first result is at index 0. |
 | operator | String | or | The query operator |
-| idPrefix | String | empty | E.g 'hotel', 'hotel:mhid', 'geo' |
+| idPrefix | Array | empty | E.g ['hotel', 'hotel:mhid', 'geo'] |
 
 ### Suggestions
 
