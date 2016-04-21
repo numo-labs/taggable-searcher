@@ -20,4 +20,16 @@ describe('Integration test for query tag', function () {
       done();
     });
   });
+  it('should get results in parallel if option is set', function (done) {
+    this.timeout(10000);
+    var options = {
+      parallel: true,
+      size: 123
+    };
+    index.searchByTags('geo:geonames.2510769', options, function (err, data) {
+      if (err) return done(err);
+      assert.equal(data.hits.hit.length, 123);
+      done();
+    });
+  });
 });
