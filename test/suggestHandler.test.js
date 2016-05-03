@@ -1,7 +1,7 @@
 var assert = require('assert');
 var suggestHandler = require('../lib/suggestHandler');
 
-describe.only('suggestHandler', function () {
+describe('suggestHandler', function () {
   it('computePrefixes: should return a single prefix if only one item was passed', function (done) {
     var item = ['geo'];
     var expectedResult = "(prefix field=tagid 'geo')";

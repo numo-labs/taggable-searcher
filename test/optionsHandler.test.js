@@ -1,5 +1,5 @@
 var assert = require('assert');
-var optionsHandler = require('../lib/optionsHandler');
+var optionsHandler = require('../lib/optionsHandler').cloudSearch;
 
 describe('optionsHandler', function () {
   it('should return the same object if everything was valid', function (done) {

@@ -16,103 +16,58 @@ Some of the queries we invoke take a while to come back with results. An example
 ## How?
 ### Installation:
 
-`npm install --save-dev git+ssh://git@github.com:numo-labs/taggable-searcher.git`
+`npm install --save taggable-searcher`
 
 ### Queries
-#### 1) Getting tags by id
-This query will return all tags based on a given list of ids.
-
+#### Hotel
+How to search for a list of hotels based on location and/or amenities?
 ```js
-var taggy = require('taggable-searcher');
-...
-taggy.searchById(['geo:geonames:123'], {...options}, function (err, result) {
-  // Handle result
-});
-...
+taggy.search.hotel()
+  .has('amenity:ne.lolloandbernie')
+  .locatedIn('geo:geonames.146615')
+  .limit(2)
+  .find(callback)
 ```
 
-#### 2) Getting tags by display name
-This query will return all tags based on a given display name
+This is a declarative way to search for hotels.
 
-```js
-var taggy = require('taggable-searcher');
-...
-taggy.searchByName(['Spain'], {...options}, function (err, result) {
-  // Handle result
-});
-...
-```
-
-#### 3) Getting tags that are tagged by a gives list of tag ids
-This query will return all tags tagged by a given list of tag ids
-
-```js
-var taggy = require('taggable-searcher');
-...
-taggy.searchByTags(['geo:geonames:123', 'amenity:general:pool'], {...options}, function (err, result) {
-  // Handle result
-});
-...
-```
-
-**Complex example**
-Let's say you want to search for all tags tagged by _geo:geonames:greece_ **OR** _geo:geonames:spain_ but with _amenity:wifi_ **AND** _amenity:pool_.
-
-```js
-var taggy = require('taggable-searcher');
-...
-taggy.searchByTags([['geo:geonames:greece', 'geo.geonames.spain'], 'amenity:wifi', 'amenity:pool'], { operator: 'and'}, function (err, result) {
-  // Handle result
-});
-...
-```
-As you can see you can wrap all the 'or' groups in sub-array. You can nest this as deep as you want to.
-
-#### 3) Getting tags based on data in the doc field.
-This query will return all tags with the given data in the doc field
-
-```js
-var taggy = require('taggable-searcher');
-...
-taggy.searchByDoc(['"_id":"geo:geonames.2267057"'], {...options}, function (err, result) {
-  // Handle result
-});
-...
-```
-
-#### options
-Following is a list of options you can pass in the functions.
-
-| key | type | default | description |
+| function | type | default | description |
 | --- | ---- | ------- | ----------- |
-| size | Integer | 1000 | The amount our results you want back. |
-| start | Integer | 0 | Specifies the offset of the first search hit you want to return. Note that the result set is zero-based; the first result is at index 0. |
-| operator | String | or | The query operator |
-| idPrefix | Array | empty | E.g ['hotel', 'hotel:mhid', 'geo'] |
+| has | Array/String | empty | The amenities the hotel needs to have. This is an **and** operation.|
+| locatedIn | Array/String | empty | The locations the hotel can be in. This is an **or** operation.|
+| limit | Int | 1000 | The max results we want to retrieve.|
 
 ### Suggestions
 
-#### 1) Getting suggestions for id
-This will return suggestions based on part of an id.
-
-```js
-taggy.suggestId('hotel:mhid', {...options}, function (err, result) {
-  // Handle result
-});
-```
-
-#### 2) Getting suggestions for displayname
+#### Getting suggestions
 This will return suggestions based on part of a display name.
 
 ```js
-taggy.suggestName('spa', {...options}, function (err, result) {
+taggy.suggest('spa', {...options}, function (err, result) {
   // Handle result
 });
 ```
+
+#### Example options
+```js
+{
+  "text": "Spa",
+  "start": 15,
+  "size": 125,
+  "operator": "or",
+  "include": "hotel",
+  "exclude": "geo"
+}
+```
+
 #### options
 Following is a list of options you can pass in the functions.
 
 | key | type | default | description |
 | --- | ---- | ------- | ----------- |
+| text | String | empty | The text you want suggestions for. |
+| include | Array | empty | The tag types you want to include (use this or exclude)|
+| exclude | Array | empty | The tag types you want to exclude (use this or include)|
+| operator | String | AND | - |
 | size | Integer | 10 | The amount our suggestions you want back. |
-| minLetters | Integer | empty | The min length of your word before it hits cloudsearch |
+| start | Integer | 0 | Used for pagination |
