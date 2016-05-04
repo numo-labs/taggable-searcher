@@ -1,10 +1,11 @@
 var assert = require('assert');
-var optionsHandler = require('../lib/optionsHandler').cloudSearch;
+var optionsHandler = require('../lib/suggest/optionsHandler');
 
 describe('optionsHandler', function () {
   it('should return the same object if everything was valid', function (done) {
     var options = {
       text: 'Spa',
+      context: 'dk:da',
       start: 15,
       size: 125,
       operator: 'or',
@@ -14,6 +15,7 @@ describe('optionsHandler', function () {
 
     var expectedResult = {
       text: 'Spa',
+      context: 'dk:da',
       start: 15,
       size: 125,
       operator: 'or',
@@ -30,10 +32,17 @@ describe('optionsHandler', function () {
       text: 'Spa',
       size: 'I am not an int'
     };
-    var result = optionsHandler(options);
-    assert.deepEqual({
+
+    var expectedResult = {
       text: 'Spa',
-      size: 1000}, result);
+      context: 'taggy',
+      operator: 'and',
+      size: 10,
+      start: 0
+    };
+
+    var result = optionsHandler(options);
+    assert.deepEqual(expectedResult, result);
     done();
   });
   it('should return the default start when the incoming start was not an integer', function (done) {
@@ -41,10 +50,17 @@ describe('optionsHandler', function () {
       text: 'Spa',
       start: 'I am not an int'
     };
-    var result = optionsHandler(options);
-    assert.deepEqual({
+
+    var expectedResult = {
       text: 'Spa',
-      start: 0}, result);
+      context: 'taggy',
+      operator: 'and',
+      size: 10,
+      start: 0
+    };
+
+    var result = optionsHandler(options);
+    assert.deepEqual(expectedResult, result);
     done();
   });
   it('should return the default and operator when the incoming start was not a valid operator', function (done) {
@@ -52,10 +68,17 @@ describe('optionsHandler', function () {
       text: 'Spa',
       operator: 'I am not a valid operator'
     };
-    var result = optionsHandler(options);
-    assert.deepEqual({
+
+    var expectedResult = {
       text: 'Spa',
-      operator: 'and'}, result);
+      context: 'taggy',
+      operator: 'and',
+      size: 10,
+      start: 0
+    };
+
+    var result = optionsHandler(options);
+    assert.deepEqual(expectedResult, result);
     done();
   });
   it('should return an include array if the input was a single item', function (done) {
@@ -63,10 +86,18 @@ describe('optionsHandler', function () {
       text: 'Spa',
       include: 'single item'
     };
-    var result = optionsHandler(options);
-    assert.deepEqual({
+
+    var expectedResult = {
       text: 'Spa',
-      include: ['single item']}, result);
+      context: 'taggy',
+      operator: 'and',
+      size: 10,
+      start: 0,
+      include: ['single item']
+    };
+
+    var result = optionsHandler(options);
+    assert.deepEqual(expectedResult, result);
     done();
   });
   it('should return an exclude array if the input was a single item', function (done) {
@@ -74,10 +105,18 @@ describe('optionsHandler', function () {
       text: 'Spa',
       exclude: 'single item'
     };
-    var result = optionsHandler(options);
-    assert.deepEqual({
+
+    var expectedResult = {
       text: 'Spa',
-      exclude: ['single item']}, result);
+      context: 'taggy',
+      operator: 'and',
+      size: 10,
+      start: 0,
+      exclude: ['single item']
+    };
+
+    var result = optionsHandler(options);
+    assert.deepEqual(expectedResult, result);
     done();
   });
   it('should throw an error when no text is provided', function (done) {

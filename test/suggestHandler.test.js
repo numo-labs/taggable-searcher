@@ -1,5 +1,5 @@
 var assert = require('assert');
-var suggestHandler = require('../lib/suggestHandler');
+var suggestHandler = require('../lib/suggest');
 
 describe('suggestHandler', function () {
   it('computePrefixes: should return a single prefix if only one item was passed', function (done) {
@@ -18,39 +18,39 @@ describe('suggestHandler', function () {
   });
   it('computeQuery: should build the cloudsearch query', function (done) {
     var expectedResult = "(and context:'dk:da' (prefix field=name 'spa'))";
-    var result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and');
+    var result = suggestHandler.__computeQuery('spa', 'dk:da', 'and');
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(prefix field=tagid 'geo'))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', ['geo']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', ['geo']);
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(or (prefix field=tagid 'geo')(prefix field=tagid 'hotel')))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', ['geo', 'hotel']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', ['geo', 'hotel']);
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(not (prefix field=tagid 'geo')))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', null, ['geo']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', null, ['geo']);
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(not (or (prefix field=tagid 'geo')(prefix field=tagid 'hotel'))))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', null, ['geo', 'hotel']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', null, ['geo', 'hotel']);
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(prefix field=tagid 'geo')(not (prefix field=tagid 'hotel')))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', ['geo'], ['hotel']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', ['geo'], ['hotel']);
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(or (prefix field=tagid 'geo')(prefix field=tagid 'hotel'))(not (prefix field=tagid 'hotel')))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', ['geo', 'hotel'], ['hotel']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', ['geo', 'hotel'], ['hotel']);
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(prefix field=tagid 'geo')(not (or (prefix field=tagid 'hotel')(prefix field=tagid 'geo'))))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', ['geo'], ['hotel', 'geo']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', ['geo'], ['hotel', 'geo']);
     assert.equal(result, expectedResult);
 
     expectedResult = "(and context:'dk:da' (prefix field=name 'spa')(or (prefix field=tagid 'geo')(prefix field=tagid 'hotel'))(not (or (prefix field=tagid 'hotel')(prefix field=tagid 'geo'))))";
-    result = suggestHandler.__computeQuery('spa', 'dk', 'da', 'and', ['geo', 'hotel'], ['hotel', 'geo']);
+    result = suggestHandler.__computeQuery('spa', 'dk:da', 'and', ['geo', 'hotel'], ['hotel', 'geo']);
     assert.equal(result, expectedResult);
     done();
   });
