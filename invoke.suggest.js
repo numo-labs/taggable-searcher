@@ -3,12 +3,14 @@ var index = require('./index');
 
 var options = {
   text: 'Spa',
-  size: 2,
-  include: 'geo'
+  size: 1,
+  include: 'geo',
+  context: 'dk:da'
 };
 
 index.suggest(options, function (err, data) {
-  console.error(err);
-  console.log(data);
-  assert.equal(data.hits.found, 2);
+  if (err) console.error(err);
+  console.log(JSON.stringify(data));
+  assert.equal(data.hits.found, 1);
+  assert.equal(data.hits.hit[0].fields.name, 'Spanien');
 });
