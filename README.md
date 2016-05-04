@@ -175,16 +175,16 @@ The result object looks like this:
 
 | function | type | default | description |
 | --- | ---- | ------- | ----------- |
-| limit | Int | 1000 | The max results we want to retrieve.|
+| limit | Int | all | The max results we want to retrieve.|
 
-### Suggestions
+## Suggestions
 
 ### Initialization
 **Environment Variable:** CLOUDSEARCH_ENDPOINT
 
 **Manual init:** `taggy.suggest.init(cloudsearch_endpoint)`
 
-#### Getting suggestions
+### Getting suggestions
 This will return suggestions based on part of a display name.
 
 ```js
@@ -193,7 +193,7 @@ taggy.suggest('spa', {...options}, function (err, result) {
 });
 ```
 
-#### Example options
+### Example options
 ```js
 {
   "text": "Spa",
@@ -206,7 +206,7 @@ taggy.suggest('spa', {...options}, function (err, result) {
 }
 ```
 
-#### options
+### options
 Following is a list of options you can pass in the functions.
 
 | key | type | default | description |
@@ -219,7 +219,7 @@ Following is a list of options you can pass in the functions.
 | size | Integer | 10 | The amount our suggestions you want back. |
 | start | Integer | 0 | Used for pagination |
 
-### Store
+## Store
 How to retrieve the document for a node in S3?
 
 ### Initialization
@@ -227,11 +227,13 @@ How to retrieve the document for a node in S3?
 
 **Manual init:** `taggy.store.init(s3_taggy_bucket, environment)`
 
+### Get document
+
 ```js
 taggy.store.get('geo:geonames.10062607', callback);
 ```
 
-#### Result
+### Result
 ```json
 {
   "_id": "geo:geonames.10062607",
