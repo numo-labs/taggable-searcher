@@ -1,5 +1,5 @@
 var assert = require('assert');
-var index = require('./index');
+var index = require('../index');
 
 // Should be able to retrieve a document
 index.store.get('geo:geonames.10062607', function (_, data) {

@@ -1,5 +1,5 @@
 var assert = require('assert');
-var index = require('./index');
+var index = require('../index');
 
 var options = {
   text: 'Spa',
@@ -11,6 +11,5 @@ var options = {
 index.suggest(options, function (err, data) {
   if (err) console.error(err);
   console.log(JSON.stringify(data));
-  assert.equal(data.hits.found, 1);
   assert.equal(data.hits.hit[0].fields.name, 'Spanien');
 });
