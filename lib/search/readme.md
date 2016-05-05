@@ -63,12 +63,13 @@ index.search.node('amenity:ne.outdoorpool').incoming({
   limit: 1
 }, callback);
 ```
-### params
-#### id
+
+### id
 Type: `string` <br/>
 
 This is the unique identifier of the node you want to operate on.
 
+### params
 #### label
 Type: `string` <br/>
 
@@ -120,12 +121,13 @@ index.search.node('amenity:ne.outdoorpool').outgoing({
   limit: 1
 }, callback);
 ```
-### params
-#### id
+
+### id
 Type: `string` <br/>
 
 This is the unique identifier of the node you want to operate on.
 
+### params
 #### label
 Type: `string` <br/>
 
@@ -177,12 +179,13 @@ index.search.node('amenity:ne.outdoorpool').links({
   limit: 1
 }, callback);
 ```
-### params
-#### id
+
+### id
 Type: `string` <br/>
 
 This is the unique identifier of the node you want to operate on.
 
+### params
 #### label
 Type: `string` <br/>
 
@@ -231,6 +234,12 @@ Returns the node specified by the _id_
 ```js
 index.search.node('amenity:ne.outdoorpool').find(callback);
 ```
+
+### id
+Type: `string`
+
+This is the unique identifier of the node you want to operate on.
+
 ### result
 ```json
 {
