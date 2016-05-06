@@ -54,4 +54,14 @@ describe('suggestHandler', function () {
     assert.equal(result, expectedResult);
     done();
   });
+  it('computeSearchField: should return id search if id is provided', function (done) {
+    var result = suggestHandler.__computeSearchField('this:is.qtest');
+    assert.equal(result, "tagid:'%s' ");
+    done();
+  });
+  it('computeSearchField: should return name prefix search if id is provided', function (done) {
+    var result = suggestHandler.__computeSearchField('Spa');
+    assert.equal(result, "(prefix field=name '%s')");
+    done();
+  });
 });
