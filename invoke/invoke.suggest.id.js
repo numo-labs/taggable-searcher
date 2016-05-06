@@ -1,9 +1,12 @@
 var assert = require('assert');
 var index = require('../index');
 
-var options = {
+const options = {
+  text: undefined,
   size: 1,
-  exclude: 'geo'
+  context: 'taggy',
+  include: ['geo'],
+  exclude: []
 };
 
 index.suggest(options, function (err, data) {
