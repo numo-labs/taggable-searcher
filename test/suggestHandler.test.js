@@ -55,13 +55,23 @@ describe('suggestHandler', function () {
     done();
   });
   it('computeSearchField: should return id search if id is provided', function (done) {
-    var result = suggestHandler.__computeSearchField('this:is.qtest');
-    assert.equal(result, "tagid:'%s' ");
+    var result = suggestHandler.__computeSearchField('this:is.atest');
+    assert.equal(result, "tagid:'this:is.atest' ");
     done();
   });
-  it('computeSearchField: should return name prefix search if id is provided', function (done) {
+  it('computeSearchField: should return name prefix search if name is provided', function (done) {
     var result = suggestHandler.__computeSearchField('Spa');
-    assert.equal(result, "(prefix field=name '%s')");
+    assert.equal(result, "(prefix field=name 'Spa')");
+    done();
+  });
+  it('computeSearchField: should return name prefix search if name is provided', function (done) {
+    var result = suggestHandler.__computeSearchField('Spa');
+    assert.equal(result, "(prefix field=name 'Spa')");
+    done();
+  });
+  it('computeSearchField: should return multiple prefixes if there are multiple words', function (done) {
+    var result = suggestHandler.__computeSearchField('New yor');
+    assert.equal(result, "(and (prefix field=name 'New')(prefix field=name 'yor'))");
     done();
   });
 });
