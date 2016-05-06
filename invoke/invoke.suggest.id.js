@@ -2,7 +2,7 @@ var assert = require('assert');
 var index = require('../index');
 
 var options = {
-  text: 'geo:geonames.2510769',
+  text: 'geo:geonames.',
   size: 1,
   include: 'geo',
   context: 'dk:da'
@@ -11,5 +11,5 @@ var options = {
 index.suggest(options, function (err, data) {
   if (err) console.error(err);
   console.log(JSON.stringify(data));
-  assert.equal(data.hits.hit[0].fields.name, 'Spanien');
+  assert.equal(data.hits.hit.length, 1);
 });

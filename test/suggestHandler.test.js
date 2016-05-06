@@ -56,7 +56,7 @@ describe('suggestHandler', function () {
   });
   it('computeSearchField: should return id search if id is provided', function (done) {
     var result = suggestHandler.__computeSearchField('this:is.atest');
-    assert.equal(result, "tagid:'this:is.atest' ");
+    assert.equal(result, "(prefix field=tagid 'this:is.atest')");
     done();
   });
   it('computeSearchField: should return name prefix search if name is provided', function (done) {
