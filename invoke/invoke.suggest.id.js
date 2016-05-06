@@ -5,8 +5,8 @@ const options = {
   text: undefined,
   size: 1,
   context: 'taggy',
-  include: ['geo'],
-  exclude: []
+  include: [],
+  exclude: ['geo']
 };
 
 index.suggest(options, function (err, data) {
