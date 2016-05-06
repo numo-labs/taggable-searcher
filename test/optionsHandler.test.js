@@ -35,7 +35,6 @@ describe('optionsHandler', function () {
 
     var expectedResult = {
       text: 'Spa',
-      context: 'taggy',
       operator: 'and',
       size: 10,
       start: 0
@@ -53,7 +52,6 @@ describe('optionsHandler', function () {
 
     var expectedResult = {
       text: 'Spa',
-      context: 'taggy',
       operator: 'and',
       size: 10,
       start: 0
@@ -71,7 +69,6 @@ describe('optionsHandler', function () {
 
     var expectedResult = {
       text: 'Spa',
-      context: 'taggy',
       operator: 'and',
       size: 10,
       start: 0
@@ -89,7 +86,6 @@ describe('optionsHandler', function () {
 
     var expectedResult = {
       text: 'Spa',
-      context: 'taggy',
       operator: 'and',
       size: 10,
       start: 0,
@@ -108,7 +104,6 @@ describe('optionsHandler', function () {
 
     var expectedResult = {
       text: 'Spa',
-      context: 'taggy',
       operator: 'and',
       size: 10,
       start: 0,

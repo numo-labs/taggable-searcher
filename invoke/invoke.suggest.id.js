@@ -2,10 +2,8 @@ var assert = require('assert');
 var index = require('../index');
 
 var options = {
-  text: 'geo:geonames.',
   size: 1,
-  include: 'geo',
-  context: 'dk:da'
+  exclude: 'geo'
 };
 
 index.suggest(options, function (err, data) {
