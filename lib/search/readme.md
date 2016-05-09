@@ -54,6 +54,44 @@ Specifies the maximum number of search hits to include in the response.
 ]
 ```
 
+## search.tile([params], callback)
+Returns a list of tiles that matches the params.
+
+### usage
+```js
+taggy.search.tile({
+  includedIn: ['marketing:concept.casacook', 'geo:geonames.390903']
+}, callback)
+```
+### params
+#### includedIn
+Type: `array` or `string` <br/>
+Default: empty
+
+This is a list of ids that _include_ the tile <br />
+This is an **or** operation.
+
+### result
+```json
+[
+  {
+    "tile": {
+      "_id": 28587,
+      "labels": [
+        "tile",
+        "article"
+      ],
+      "properties": {
+        "id": "tile:article.dk.46",
+        "name": "Casa Cook – sundhed, design og høj komfort",
+        "nodeSubType": "article",
+        "nodeType": "tile"
+      }
+    }
+  }
+]
+```
+
 ## search.node(id).incoming([params], callback)
 Returns a list of incoming relations and their corresponding nodes.
 ### Usage
