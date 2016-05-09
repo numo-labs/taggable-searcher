@@ -2,11 +2,12 @@ var assert = require('assert');
 var index = require('../index');
 
 var params = {
-  includedIn: 'geo:geonames.361291',
+  includedIn: ['marketing:concept.casacook', 'geo:geonames.390903', 'amenity:test.1245'],
   limit: 2
 };
 
 index.search.tile(params, function (err, data) {
   if (err) console.error(err);
-  assert.equal(data.length, 2);
+  console.log(JSON.stringify(data, null, 2));
+  assert.equal(data.length, 1);
 });
