@@ -2,7 +2,7 @@ var assert = require('assert');
 var index = require('../index');
 
 var params = {
-  includedIn: 'geo:geonames.spain',
+  includedIn: 'geo:geonames.361291',
   limit: 2
 };
 
