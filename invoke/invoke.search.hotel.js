@@ -1,3 +1,4 @@
+require('env2')('.env');
 var assert = require('assert');
 var index = require('../index');
 

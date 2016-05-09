@@ -19,8 +19,7 @@ describe('optionsHandler', function () {
       start: 15,
       size: 125,
       operator: 'or',
-      include: ['hotel'],
-      exclude: ['geo']
+      include: ['hotel']
     };
 
     var result = optionsHandler(options);
