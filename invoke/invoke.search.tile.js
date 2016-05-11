@@ -7,8 +7,8 @@ var params = {
   limit: 2
 };
 
-index.search.tile(params, function (err, data) {
+index.search.tile(params, function (err, result) {
   if (err) console.error(err);
-  console.log(JSON.stringify(data, null, 2));
-  assert.equal(data.length, 2);
+  console.log('Found ' + result.data.length + ' tiles.');
+  assert(result.data.length > 1);
 });
