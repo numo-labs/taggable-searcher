@@ -3,35 +3,33 @@ var assert = require('assert');
 var index = require('../index');
 
 var params = {
-  has: 'amenity:ne.allinclusive',
-  locatedIn: 'geo:geonames.4930956',
-  limit: 1
+  geography: ['geo:geonames.7732185', 'geo:geonames.2514042', 'geo:geonames.2514042'],
+  amenities: ['amenity:ne.wifi', 'amenity:ne.allinclusive'],
+  marketing: ['marketing:concept.sunprime']
 };
 
-index.search.hotel(params, function (err, data) {
+index.search.hotel(params, function (err, result) {
   if (err) console.error(err);
-  console.log(JSON.stringify(data, null, 2));
-  assert.equal(data.length, 1);
+  console.log('Found ' + result.data.length + ' hotels.');
+  assert(result.data.length > 0);
 });
 
 var params2 = {
-  has: 'amenity:ne.allinclusive',
-  limit: 5
+  amenities: 'amenity:ne.allinclusive'
 };
 
-index.search.hotel(params2, function (err, data) {
+index.search.hotel(params2, function (err, result) {
   if (err) console.error(err);
-  console.log(JSON.stringify(data, null, 2));
-  assert.equal(data.length, 5);
+  console.log('Found ' + result.data.length + ' hotels.');
+  assert(result.data.length > 0);
 });
 
 var params3 = {
-  locatedIn: 'geo:geonames.2510769',
-  limit: 2
+  geography: 'geo:geonames.2510769'
 };
 
-index.search.hotel(params3, function (err, data) {
+index.search.hotel(params3, function (err, result) {
   if (err) console.error(err);
-  console.log(JSON.stringify(data, null, 2));
-  assert.equal(data.length, 2);
+  console.log('Found ' + result.data.length + ' hotels.');
+  assert(result.data.length > 0);
 });
