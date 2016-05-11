@@ -10,5 +10,6 @@ var params = {
 index.search.tile(params, function (err, result) {
   if (err) console.error(err);
   console.log('Found ' + result.data.length + ' tiles.');
+  console.log(JSON.stringify(result, null, 2));
   assert(result.data.length > 1);
 });
