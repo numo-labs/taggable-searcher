@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/numo-labs/taggable-searcher",
   "dependencies": {
+    "async": "^1.5.2",
     "elasticsearch": "^11.0.1",
     "env2": "^2.0.7",
     "http-aws-es": "^1.1.3",
