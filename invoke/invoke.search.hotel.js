@@ -12,26 +12,25 @@ var params = {
 index.search.hotel(params, function (err, result) {
   if (err) console.error(err);
   console.log('Found ' + result.data.length + ' hotels.');
-  console.log(JSON.stringify(result, null, 2));
   assert(result.data.length > 0);
 });
 
-// var params2 = {
-//   amenities: 'amenity:ne.allinclusive'
-// };
+var params2 = {
+  marketing: 'marketing:concept.casacook'
+};
 
-// index.search.hotel(params2, function (err, result) {
-//   if (err) console.error(err);
-//   console.log('Found ' + result.data.length + ' hotels.');
-//   assert(result.data.length > 0);
-// });
+index.search.hotel(params2, function (err, result) {
+  if (err) console.error(err);
+  console.log('Found ' + result.data.length + ' hotels.');
+  assert(result.data.length > 0);
+});
 
-// var params3 = {
-//   geography: 'geo:geonames.2510769'
-// };
+var params3 = {
+  geography: 'geo:geonames.2510769'
+};
 
-// index.search.hotel(params3, function (err, result) {
-//   if (err) console.error(err);
-//   console.log('Found ' + result.data.length + ' hotels.');
-//   assert(result.data.length > 0);
-// });
+index.search.hotel(params3, function (err, result) {
+  if (err) console.error(err);
+  console.log('Found ' + result.data.length + ' hotels.');
+  assert(result.data.length > 0);
+});
