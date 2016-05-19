@@ -45,5 +45,5 @@ var params4 = {
 index.search.hotel(params4, function (err, result) {
   if (err) console.error(err);
   console.log('Found ' + result.data.length + ' hotels.');
-  assert(result.data.length == 0);
+  assert(result.data.length === 0);
 });
