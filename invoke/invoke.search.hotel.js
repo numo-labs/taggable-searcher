@@ -34,3 +34,16 @@ index.search.hotel(params3, function (err, result) {
   console.log('Found ' + result.data.length + ' hotels.');
   assert(result.data.length > 0);
 });
+
+var params4 = {
+  geography: [],
+  amenities: [],
+  marketing: [],
+  tiles: ['tile:article.dk.125']
+};
+
+index.search.hotel(params4, function (err, result) {
+  if (err) console.error(err);
+  console.log('Found ' + result.data.length + ' hotels.');
+  assert(result.data.length == 0);
+});
