@@ -1,0 +1,191 @@
+{
+  "nodes": [
+    {
+      "id": 516,
+      "label": "geo",
+      "title": "London"
+    },
+    {
+      "id": 1650,
+      "label": "geo",
+      "title": "Lambeth"
+    },
+    {
+      "id": 1648,
+      "label": "hotel",
+      "title": "H10 London Waterloo"
+    },
+    {
+      "id": 4320,
+      "label": "hotel",
+      "title": "H10 London Waterloo, London"
+    },
+    {
+      "id": 516,
+      "label": "geo",
+      "title": "London"
+    },
+    {
+      "id": 1375,
+      "label": "geo",
+      "title": "Chelsea Embankment"
+    },
+    {
+      "id": 1374,
+      "label": "hotel",
+      "title": "Royal Horseguards"
+    },
+    {
+      "id": 3915,
+      "label": "hotel",
+      "title": "The Royal Horseguards, London"
+    },
+    {
+      "id": 547,
+      "label": "geo",
+      "title": "Bloomsbury"
+    },
+    {
+      "id": 2684,
+      "label": "hotel",
+      "title": "Imperial"
+    },
+    {
+      "id": 4408,
+      "label": "hotel",
+      "title": "Imperial, London"
+    },
+    {
+      "id": 545,
+      "label": "geo",
+      "title": "Charing Cross"
+    },
+    {
+      "id": 2066,
+      "label": "hotel",
+      "title": "Strand Palace"
+    },
+    {
+      "id": 4336,
+      "label": "hotel",
+      "title": "Strand Palace, London"
+    },
+    {
+      "id": 525,
+      "label": "geo",
+      "title": "North Kensington"
+    },
+    {
+      "id": 3013,
+      "label": "hotel",
+      "title": "Citadines Prestige South Kensington"
+    },
+    {
+      "id": 4240,
+      "label": "hotel",
+      "title": "Citadines South Kensington, London"
+    },
+    {
+      "id": 513,
+      "label": "geo",
+      "title": "South Kensington"
+    },
+    {
+      "id": 2730,
+      "label": "hotel",
+      "title": "Myhotel Chelsea"
+    },
+    {
+      "id": 4325,
+      "label": "hotel",
+      "title": "Myhotel Chelsea, London"
+    }
+  ],
+  "links": [
+    {
+      "source": 2,
+      "target": 1,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "type": "IS"
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 6,
+      "target": 5,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 7,
+      "target": 6,
+      "type": "IS"
+    },
+    {
+      "source": 8,
+      "target": 4,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 9,
+      "target": 8,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 10,
+      "target": 9,
+      "type": "IS"
+    },
+    {
+      "source": 11,
+      "target": 4,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 12,
+      "target": 11,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 13,
+      "target": 12,
+      "type": "IS"
+    },
+    {
+      "source": 14,
+      "target": 4,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 15,
+      "target": 14,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 16,
+      "target": 15,
+      "type": "IS"
+    },
+    {
+      "source": 17,
+      "target": 4,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 18,
+      "target": 17,
+      "type": "LOCATED_IN"
+    },
+    {
+      "source": 19,
+      "target": 18,
+      "type": "IS"
+    }
+  ]
+}

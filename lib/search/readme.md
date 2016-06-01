@@ -27,31 +27,58 @@ Default: taggy
 This is a unique identifier to differentiate different _markets_ and _languages_. <br/>
 E.g. a Danish context may look like this: `dk:da`
 
-#### limit
-Type: `int` <br />
-Default: all
-
-Specifies the maximum number of search hits to include in the response.
-
 ### result
 ```json
-[
-  {
-    "node": {
-      "_id": 19397,
-      "labels": [
-        "ne",
-        "hotel"
+{
+  "queries": [
+    "MATCH path = (:geo {id:\"geo:geonames.2643743\"})<-[:LOCATED_IN*..10]-(:hotel)<-[:IS]-(hotel:hotel),(hotel)-[:HAS]->(:amenity {id:\"amenity:ne.wifi\"}),(hotel)-[:HAS]->(:amenity {id:\"amenity:ne.allinclusive\"}) RETURN hotel,nodes(path) as nodes,relationships(path) as relationships"
+  ],
+  "data": [
+    {
+      "hotel": {
+        "_id": 4320,
+        "labels": [
+          "hotel",
+          "ne"
+        ],
+        "properties": {
+          "nodeSubType": "ne",
+          "name": "H10 London Waterloo, London",
+          "id": "hotel:ne.wvid.125933",
+          "nodeType": "hotel"
+        }
+      },
+      "nodes": [
+        {
+          "_id": 516,
+          "labels": [
+            "geo",
+            "geonames"
+          ],
+          "properties": {
+            "nodeSubType": "geonames",
+            "name": "London",
+            "id": "geo:geonames.2643743",
+            "nodeType": "geo"
+          }
+        }
       ],
-      "properties": {
-        "id": "hotel:ne.wvid.197679",
-        "name": "Fifteen Beacon, Boston",
-        "nodeSubType": "ne",
-        "nodeType": "hotel"
-      }
+      "relationships": [
+        {
+          "_id": 40911,
+          "type": "LOCATED_IN",
+          "properties": {
+            "active": true,
+            "type": "geo"
+          },
+          "_fromId": 1650,
+          "_toId": 516
+        }
+      ]
     }
-  }
-]
+  ]
+}
+
 ```
 
 ## search.tile([params], callback)
@@ -73,23 +100,90 @@ This is an **or** operation.
 
 ### result
 ```json
-[
-  {
-    "tile": {
-      "_id": 28587,
-      "labels": [
-        "tile",
-        "article"
+{
+  "query": "MATCH path = (:geo {id:'geo:geonames.2515271'})-[:LOCATED_IN*..10]->()-[:INCLUDES]->(tile:tile) RETURN tile,nodes(path) as nodes,relationships(path) as relationships UNION MATCH path = (:geo {id:'geo:geonames.2515271'})-[:INCLUDES]->(tile:tile) RETURN tile,nodes(path) as nodes,relationships(path) as relationships LIMIT 2",
+  "data": [
+    {
+      "tile": {
+        "_id": 7195,
+        "labels": [
+          "tile",
+          "article"
+        ],
+        "properties": {
+          "nodeSubType": "article",
+          "name": "Vandring på Madeira",
+          "id": "tile:article.dk.33",
+          "nodeType": "tile"
+        }
+      },
+      "nodes": [
+        {
+          "_id": 335,
+          "labels": [
+            "geo",
+            "geonames"
+          ],
+          "properties": {
+            "nodeSubType": "geonames",
+            "name": "Las Palmas",
+            "id": "geo:geonames.2515271",
+            "nodeType": "geo"
+          }
+        },
+        {
+          "_id": 309,
+          "labels": [
+            "geo",
+            "geonames"
+          ],
+          "properties": {
+            "nodeSubType": "geonames",
+            "name": "Canary Islands",
+            "id": "geo:geonames.2593110",
+            "nodeType": "geo"
+          }
+        },
+        {
+          "_id": 7195,
+          "labels": [
+            "tile",
+            "article"
+          ],
+          "properties": {
+            "nodeSubType": "article",
+            "name": "Vandring på Madeira",
+            "id": "tile:article.dk.33",
+            "nodeType": "tile"
+          }
+        }
       ],
-      "properties": {
-        "id": "tile:article.dk.46",
-        "name": "Casa Cook – sundhed, design og høj komfort",
-        "nodeSubType": "article",
-        "nodeType": "tile"
-      }
+      "relationships": [
+        {
+          "_id": 47073,
+          "type": "LOCATED_IN",
+          "properties": {
+            "active": true,
+            "type": "geo"
+          },
+          "_fromId": 335,
+          "_toId": 309
+        },
+        {
+          "_id": 47485,
+          "type": "INCLUDES",
+          "properties": {
+            "active": true,
+            "type": "tile"
+          },
+          "_fromId": 309,
+          "_toId": 7195
+        }
+      ]
     }
-  }
-]
+  ]
+}
+
 ```
 
 ## search.node(id).incoming([params], callback)
