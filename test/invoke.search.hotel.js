@@ -3,7 +3,7 @@ var assert = require('assert');
 var index = require('../index');
 
 describe('Integration: search.hotel', function () {
-  it('hjshould find results for amenities and tiles', function (done) {
+  it('should find results for amenities and tiles', function (done) {
     var params = {
       geography: ['geo:geonames.259511'],
       amenities: ['amenity:ne.wifi', 'amenity:ne.allinclusive']
