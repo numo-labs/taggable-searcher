@@ -39,7 +39,7 @@ describe('Integration: search.hotel', function () {
     });
   });
   it('should find results for tiles', function (done) {
-    this.timeout(4000);
+    this.timeout(10000);
     var params = {
       geography: [],
       amenities: ['amenity:ne.wifi', 'amenity:ne.allinclusive'],
@@ -54,7 +54,7 @@ describe('Integration: search.hotel', function () {
     });
   });
   it('should find results for all the params filled in', function (done) {
-    this.timeout(4000);
+    this.timeout(10000);
     var params = {
       geography: [],
       amenities: ['amenity:ne.wifi', 'amenity:ne.bar'],
