@@ -21,11 +21,19 @@ This is a list of _amenities_ the hotel you are looking for must have. <br />
 This is an **and** operation. The hotel must have all the _amenities_ in this list.
 
 #### locatedIn
-Type: `array <br/>
+Type: `array` <br/>
 Default: taggy
 
 This is a unique identifier to differentiate different _markets_ and _languages_. <br/>
 E.g. a Danish context may look like this: `dk:da`
+
+#### fastQuery
+Type: `boolean` <br/>
+Default: false
+
+By default all queries will run as a verbose query, this returns all information 
+needed to understand how the query has devised its results. When set to `true`
+This information is not requested resulting in faster queries.
 
 ### result
 ```json
@@ -97,6 +105,14 @@ Default: empty
 
 This is a list of ids that _include_ the tile <br />
 This is an **or** operation.
+
+#### fastQuery
+Type: `boolean` <br/>
+Default: false
+
+By default all queries will run as a verbose query, this returns all information 
+needed to understand how the query has devised its results. When set to `true`
+This information is not requested resulting in faster queries.
 
 ### result
 ```json
