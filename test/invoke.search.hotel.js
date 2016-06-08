@@ -12,6 +12,7 @@ describe('Integration: search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -23,6 +24,7 @@ describe('Integration: search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -35,6 +37,7 @@ describe('Integration: search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -50,6 +53,7 @@ describe('Integration: search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -65,7 +69,7 @@ describe('Integration: search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
-      console.log('result', result);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -82,6 +86,7 @@ describe('Integration (fastQuery): search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -94,6 +99,7 @@ describe('Integration (fastQuery): search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -107,6 +113,7 @@ describe('Integration (fastQuery): search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -123,6 +130,7 @@ describe('Integration (fastQuery): search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -139,7 +147,7 @@ describe('Integration (fastQuery): search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) done(err);
       assert(result.data.length > 0);
-      console.log('result', result);
+      console.log('results:', result.data.length);
       done();
     });
   });
@@ -153,6 +161,7 @@ describe('Integration (fastQuery): search.hotel', function () {
     index.search.hotel(params, function (err, result) {
       if (err) return done(err);
       assert(result.data.length > 0);
+      console.log('results:', result.data.length);
       done();
     });
   });
