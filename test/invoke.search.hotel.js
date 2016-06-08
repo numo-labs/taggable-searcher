@@ -152,7 +152,7 @@ describe('Integration (fastQuery): search.hotel', function () {
 
     index.search.hotel(params, function (err, result) {
       if (err) return done(err);
-      assert(result.data.length === 0);
+      assert(result.data.length > 0);
       done();
     });
   });
