@@ -5,7 +5,7 @@ var index = require('../index');
 describe('Integration: search.node', function () {
   it('should find the incoming nodes for a tiles', function (done) {
     var params = {
-      maxDept: 1,
+      maxDepth: 1,
       limit: 2
     };
 
