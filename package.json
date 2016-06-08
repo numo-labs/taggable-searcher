@@ -1,6 +1,6 @@
 {
   "name": "taggable-searcher",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Helper library to query the tag system",
   "main": "index.js",
   "scripts": {
