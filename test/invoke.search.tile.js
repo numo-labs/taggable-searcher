@@ -12,7 +12,7 @@ describe('Integration: search.tile', function () {
 
     index.search.tile(params, function (err, result) {
       if (err) done(err);
-      assert(result.data.length === 2);
+      assert(result.data.length > 0);
       done();
     });
   });
