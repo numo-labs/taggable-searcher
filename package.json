@@ -6,7 +6,7 @@
   "scripts": {
     "nocov": "mocha --recursive",
     "test": "semistandard && npm run coverage",
-    "coverage": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/**/*.js --report lcov -- -R spec",
+    "coverage": "istanbul cover _mocha test/ --report lcov -- -R spec --recursive",
     "lint": "semistandard"
   },
   "repository": {
