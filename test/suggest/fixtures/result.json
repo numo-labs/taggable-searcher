@@ -1,0 +1,978 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 80,
+    "max_score": 6.0852137,
+    "hits": [
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:geo:geonames.2510769",
+        "_score": 6.0852137,
+        "_source": {
+          "name": "Spanien",
+          "label": "Spanien",
+          "tagid": "geo:geonames.2510769",
+          "context": "dk:da",
+          "active": true
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:geo:geonames.6946451",
+        "_score": 3.0145535,
+        "_source": {
+          "name": "Spanisches Dorf \"Pueblo Espanol\"",
+          "label": "Spanisches Dorf \"Pueblo Espanol\"",
+          "tagid": "geo:geonames.6946451",
+          "context": "dk:da",
+          "active": true
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:geo:geonames.6947342",
+        "_score": 2.3870134,
+        "_source": {
+          "name": "Spanisches Dorf \"Pueblo Espanol\"",
+          "label": "Spanisches Dorf \"Pueblo Espanol\"",
+          "tagid": "geo:geonames.6947342",
+          "context": "dk:da",
+          "active": true
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:marketing:term.spa",
+        "_score": 2.0091918,
+        "_source": {
+          "name": "Spa",
+          "label": "Spa & Relax",
+          "tagid": "marketing:term.spa",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.csnasp6",
+        "_score": 1.8652625,
+        "_source": {
+          "name": "Hotel Spa Villalba, Vilaflor",
+          "label": "Hotel Spa Villalba, Vilaflor",
+          "tagid": "hotel:mhid.csnasp6",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.sww35ky",
+        "_score": 1.8583529,
+        "_source": {
+          "name": "Kirini Suites & Spa, Oia",
+          "label": "Kirini Suites & Spa, Oia",
+          "tagid": "hotel:mhid.sww35ky",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.u7ptuee",
+        "_score": 1.8145988,
+        "_source": {
+          "name": "Elysium Resort & Spa, Faliraki",
+          "label": "Elysium Resort & Spa, Faliraki",
+          "tagid": "hotel:mhid.u7ptuee",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.8auu1n7",
+        "_score": 1.7179248,
+        "_source": {
+          "name": "Royalton Hicacos Resort & Spa, Varadero",
+          "label": "Royalton Hicacos Resort & Spa, Varadero",
+          "tagid": "hotel:mhid.8auu1n7",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.dtqqq2j",
+        "_score": 1.7179248,
+        "_source": {
+          "name": "Royal Island Resort & Spa, Maldiverne",
+          "label": "Royal Island Resort & Spa, Maldiverne",
+          "tagid": "hotel:mhid.dtqqq2j",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.zxLhfat",
+        "_score": 1.7179248,
+        "_source": {
+          "name": "Royal Atlas Hotel & Spa, Agadir",
+          "label": "Royal Atlas Hotel & Spa, Agadir",
+          "tagid": "hotel:mhid.zxLhfat",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.vd9xxbp",
+        "_score": 1.7179248,
+        "_source": {
+          "name": "Manchebo Beach Resort & Spa, Aruba",
+          "label": "Manchebo Beach Resort & Spa, Aruba",
+          "tagid": "hotel:mhid.vd9xxbp",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.038cc80",
+        "_score": 1.7111477,
+        "_source": {
+          "name": "SENTIDO Buganvilla Hotel & Spa, Jandia",
+          "label": "SENTIDO Buganvilla Hotel & Spa, Jandia",
+          "tagid": "hotel:mhid.038cc80",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.a0d9efs",
+        "_score": 1.7111477,
+        "_source": {
+          "name": "Hotel Timoulay & Spa Agadir, Agadir",
+          "label": "Hotel Timoulay & Spa Agadir, Agadir",
+          "tagid": "hotel:mhid.a0d9efs",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.sLpqjgv",
+        "_score": 1.7111477,
+        "_source": {
+          "name": "Anantara Veli Resort & Spa, Maldiverne",
+          "label": "Anantara Veli Resort & Spa, Maldiverne",
+          "tagid": "hotel:mhid.sLpqjgv",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.qk9e8yk",
+        "_score": 1.7111477,
+        "_source": {
+          "name": "Albir Playa Hotel & Spa, Albir",
+          "label": "Albir Playa Hotel & Spa, Albir",
+          "tagid": "hotel:mhid.qk9e8yk",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.pqy8car",
+        "_score": 1.7111477,
+        "_source": {
+          "name": "Sainte Anne Resort & Spa, Mahe",
+          "label": "Sainte Anne Resort & Spa, Mahe",
+          "tagid": "hotel:mhid.pqy8car",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.22sx986",
+        "_score": 1.6725936,
+        "_source": {
+          "name": "Skopelos Holidays Hotel & Spa, Skopelos",
+          "label": "Skopelos Holidays Hotel & Spa, Skopelos",
+          "tagid": "hotel:mhid.22sx986",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.L2d4np1",
+        "_score": 1.6725936,
+        "_source": {
+          "name": "Karona Resort & Spa, Karon Beach",
+          "label": "Karona Resort & Spa, Karon Beach",
+          "tagid": "hotel:mhid.L2d4np1",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.Ls8u8nh",
+        "_score": 1.6725936,
+        "_source": {
+          "name": "Gran Caribe Resort & Spa, Cancun",
+          "label": "Gran Caribe Resort & Spa, Cancun",
+          "tagid": "hotel:mhid.Ls8u8nh",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.aLp0fmm",
+        "_score": 1.6725936,
+        "_source": {
+          "name": "Coco Ocean Resort & Spa, Gambia",
+          "label": "Coco Ocean Resort & Spa, Gambia",
+          "tagid": "hotel:mhid.aLp0fmm",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.2955rmo",
+        "_score": 1.5705872,
+        "_source": {
+          "name": "Phuket Orchid Resort & Spa, Karon Beach",
+          "label": "Phuket Orchid Resort & Spa, Karon Beach",
+          "tagid": "hotel:mhid.2955rmo",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.3L68vcq",
+        "_score": 1.5705872,
+        "_source": {
+          "name": "Anantara Mui Ne Resort & Spa, Phan Thiet",
+          "label": "Anantara Mui Ne Resort & Spa, Phan Thiet",
+          "tagid": "hotel:mhid.3L68vcq",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.L2iw2o9",
+        "_score": 1.5705872,
+        "_source": {
+          "name": "Cornelia Diamond Golf Resort & Spa, Belek",
+          "label": "Cornelia Diamond Golf Resort & Spa, Belek",
+          "tagid": "hotel:mhid.L2iw2o9",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.eva1hs3",
+        "_score": 1.5705872,
+        "_source": {
+          "name": "Bohemia Suites & SPA, Playa del Inglés",
+          "label": "Bohemia Suites & SPA, Playa del Inglés",
+          "tagid": "hotel:mhid.eva1hs3",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.grrr4at",
+        "_score": 1.5705872,
+        "_source": {
+          "name": "Grand Palladium Palace Resort & Spa, Punta Cana",
+          "label": "Grand Palladium Palace Resort & Spa, Punta Cana",
+          "tagid": "hotel:mhid.grrr4at",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.geo5ant",
+        "_score": 1.5705872,
+        "_source": {
+          "name": "Miami Beach Resort & Spa, Miami Beach",
+          "label": "Miami Beach Resort & Spa, Miami Beach",
+          "tagid": "hotel:mhid.geo5ant",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.jsngvmv",
+        "_score": 1.5705872,
+        "_source": {
+          "name": "Minoa Palace Resort & Spa, Platanias (Chaniakysten)",
+          "label": "Minoa Palace Resort & Spa, Platanias (Chaniakysten)",
+          "tagid": "hotel:mhid.jsngvmv",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.40dnycw",
+        "_score": 1.5639424,
+        "_source": {
+          "name": "Breathless Punta Cana Resort & Spa, Punta Cana",
+          "label": "Breathless Punta Cana Resort & Spa, Punta Cana",
+          "tagid": "hotel:mhid.40dnycw",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.4q9djur",
+        "_score": 1.5639424,
+        "_source": {
+          "name": "Crystal De Luxe Resort & Spa, Kemer",
+          "label": "Crystal De Luxe Resort & Spa, Kemer",
+          "tagid": "hotel:mhid.4q9djur",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.7exzhjg",
+        "_score": 1.5639424,
+        "_source": {
+          "name": "Aana Resort and Spa, Koh Chang",
+          "label": "Aana Resort and Spa, Koh Chang",
+          "tagid": "hotel:mhid.7exzhjg",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.cp763fu",
+        "_score": 1.5639424,
+        "_source": {
+          "name": "SENTIDO Port Royal Villas & Spa, Kolymbia",
+          "label": "SENTIDO Port Royal Villas & Spa, Kolymbia",
+          "tagid": "hotel:mhid.cp763fu",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.xjr9g58",
+        "_score": 1.5639424,
+        "_source": {
+          "name": "Hyatt Regency Mission Bay Spa, San Diego",
+          "label": "Hyatt Regency Mission Bay Spa, San Diego",
+          "tagid": "hotel:mhid.xjr9g58",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.qwwky7s",
+        "_score": 1.5639424,
+        "_source": {
+          "name": "Bali Mandira Beach Resort & Spa, Kuta Beach",
+          "label": "Bali Mandira Beach Resort & Spa, Kuta Beach",
+          "tagid": "hotel:mhid.qwwky7s",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.hqk6xzb",
+        "_score": 1.5639424,
+        "_source": {
+          "name": "Gambia Coral Beach Hotel & Spa, Gambia",
+          "label": "Gambia Coral Beach Hotel & Spa, Gambia",
+          "tagid": "hotel:mhid.hqk6xzb",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.fxsx39z",
+        "_score": 1.5305882,
+        "_source": {
+          "name": "Bodrum Holiday Resort & Spa, Bodrum by",
+          "label": "Bodrum Holiday Resort & Spa, Bodrum by",
+          "tagid": "hotel:mhid.fxsx39z",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.ud66oqj",
+        "_score": 1.5305882,
+        "_source": {
+          "name": "Holiday Villa Beach Resort & Spa, Langkawi",
+          "label": "Holiday Villa Beach Resort & Spa, Langkawi",
+          "tagid": "hotel:mhid.ud66oqj",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.upre8ut",
+        "_score": 1.5305882,
+        "_source": {
+          "name": "Kandaburi Resort and Spa, Koh Samui",
+          "label": "Kandaburi Resort and Spa, Koh Samui",
+          "tagid": "hotel:mhid.upre8ut",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:1:marketing:term.spa",
+        "_score": 1.4392939,
+        "_source": {
+          "name": "Spa Together",
+          "label": "Spa & Relax",
+          "tagid": "marketing:term.spa",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.veL6xjq",
+        "_score": 1.4232495,
+        "_source": {
+          "name": "Punta Cana Princess All Suites Resort & Spa, Punta Cana",
+          "label": "Punta Cana Princess All Suites Resort & Spa, Punta Cana",
+          "tagid": "hotel:mhid.veL6xjq",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.o99tsr9",
+        "_score": 1.4232495,
+        "_source": {
+          "name": "Shangri La Tanjung Aru Resort & Spa, Kota Kinabalu",
+          "label": "Shangri La Tanjung Aru Resort & Spa, Kota Kinabalu",
+          "tagid": "hotel:mhid.o99tsr9",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.mgeL28f",
+        "_score": 1.4232495,
+        "_source": {
+          "name": "Son Caliu Spa - Oasis, Magalluf, Palma Nova & Cala Vinas",
+          "label": "Son Caliu Spa - Oasis, Magalluf, Palma Nova & Cala Vinas",
+          "tagid": "hotel:mhid.mgeL28f",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.ugzt0mb",
+        "_score": 1.4167372,
+        "_source": {
+          "name": "Son Antem Golf Resort & Spa, Playa de Palma",
+          "label": "Son Antem Golf Resort & Spa, Playa de Palma",
+          "tagid": "hotel:mhid.ugzt0mb",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.afo1h6k",
+        "_score": 1.388583,
+        "_source": {
+          "name": "Sunprime Coral Suites & Spa, Playa de las Américas",
+          "label": "Sunprime Coral Suites & Spa, Playa de las Américas",
+          "tagid": "hotel:mhid.afo1h6k",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.eq7dkhh",
+        "_score": 1.3749406,
+        "_source": {
+          "name": "Solana Hotel and Spa, Mellieha",
+          "label": "Solana Hotel and Spa, Mellieha",
+          "tagid": "hotel:mhid.eq7dkhh",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.u2doiex",
+        "_score": 1.3749406,
+        "_source": {
+          "name": "Princess Andriana Resort & Spa, Kiotari",
+          "label": "Princess Andriana Resort & Spa, Kiotari",
+          "tagid": "hotel:mhid.u2doiex",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.u094w5b",
+        "_score": 1.3749406,
+        "_source": {
+          "name": "Paloma Grida Resort & SPA, Belek",
+          "label": "Paloma Grida Resort & SPA, Belek",
+          "tagid": "hotel:mhid.u094w5b",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.kxuL02d",
+        "_score": 1.3749406,
+        "_source": {
+          "name": "Kuredu Island Resort & Spa, Maldiverne",
+          "label": "Kuredu Island Resort & Spa, Maldiverne",
+          "tagid": "hotel:mhid.kxuL02d",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.1pa9LL5",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Mon Port Hotel & Spa, Port d´Andratx",
+          "label": "Mon Port Hotel & Spa, Port d´Andratx",
+          "tagid": "hotel:mhid.1pa9LL5",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.1uj3a5o",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Dreams La Romana Resort & Spa, Bayahibe",
+          "label": "Dreams La Romana Resort & Spa, Bayahibe",
+          "tagid": "hotel:mhid.1uj3a5o",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.2u4w5oa",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Banthai Beach Resort & Spa, Patong Beach",
+          "label": "Banthai Beach Resort & Spa, Patong Beach",
+          "tagid": "hotel:mhid.2u4w5oa",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.Lrfv6qp",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Avra Imperial Beach Resort & Spa, Kolimbari (Chaniakysten)",
+          "label": "Avra Imperial Beach Resort & Spa, Kolimbari (Chaniakysten)",
+          "tagid": "hotel:mhid.Lrfv6qp",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.Liobtp2",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Rodos Park Suites & Spa Hotel, Rhodos by",
+          "label": "Rodos Park Suites & Spa Hotel, Rhodos by",
+          "tagid": "hotel:mhid.Liobtp2",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.btj7t0k",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Karon Sea Sands Resort & Spa, Karon Beach",
+          "label": "Karon Sea Sands Resort & Spa, Karon Beach",
+          "tagid": "hotel:mhid.btj7t0k",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.bspp0px",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Bull Hotel Escorial & Spa, Playa del Inglés",
+          "label": "Bull Hotel Escorial & Spa, Playa del Inglés",
+          "tagid": "hotel:mhid.bspp0px",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.xka06o8",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Avista Hideaway Resort And Spa, Patong Beach",
+          "label": "Avista Hideaway Resort And Spa, Patong Beach",
+          "tagid": "hotel:mhid.xka06o8",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.y6f150p",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Kacha Resort and Spa, Koh Chang",
+          "label": "Kacha Resort and Spa, Koh Chang",
+          "tagid": "hotel:mhid.y6f150p",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.vpn0rvv",
+        "_score": 1.2607328,
+        "_source": {
+          "name": "Gran Porto Resort & Spa, Playa del Carmen",
+          "label": "Gran Porto Resort & Spa, Playa del Carmen",
+          "tagid": "hotel:mhid.vpn0rvv",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.t1Lb4sk",
+        "_score": 1.2493279,
+        "_source": {
+          "name": "Seabank Resort Spa, Mellieha",
+          "label": "Seabank Resort Spa, Mellieha",
+          "tagid": "hotel:mhid.t1Lb4sk",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.khyv7n6",
+        "_score": 1.2493279,
+        "_source": {
+          "name": "Shandrani Resort & Spa, Mauritius",
+          "label": "Shandrani Resort & Spa, Mauritius",
+          "tagid": "hotel:mhid.khyv7n6",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.c8zzzLu",
+        "_score": 1.1543449,
+        "_source": {
+          "name": "Kontokali Bay Resort & Spa, Gouvia",
+          "label": "Kontokali Bay Resort & Spa, Gouvia",
+          "tagid": "hotel:mhid.c8zzzLu",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.yy6qj0d",
+        "_score": 1.1543449,
+        "_source": {
+          "name": "Anantara Dhigu Resort & Spa, Maldiverne",
+          "label": "Anantara Dhigu Resort & Spa, Maldiverne",
+          "tagid": "hotel:mhid.yy6qj0d",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.r2m2ard",
+        "_score": 1.1543449,
+        "_source": {
+          "name": "SENTIDO Zeynep Golf & Spa, Belek",
+          "label": "SENTIDO Zeynep Golf & Spa, Belek",
+          "tagid": "hotel:mhid.r2m2ard",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.cce4kyc",
+        "_score": 1.1465249,
+        "_source": {
+          "name": "Bávaro Princess All Suites Resort & Spa, Punta Cana",
+          "label": "Bávaro Princess All Suites Resort & Spa, Punta Cana",
+          "tagid": "hotel:mhid.cce4kyc",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.h34f3vj",
+        "_score": 1.1465249,
+        "_source": {
+          "name": "Hotel Garbi Ibiza Spa, Playa d´en Bossa",
+          "label": "Hotel Garbi Ibiza Spa, Playa d´en Bossa",
+          "tagid": "hotel:mhid.h34f3vj",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.rjqvsvh",
+        "_score": 1.1465249,
+        "_source": {
+          "name": "Best Western Premier Bangtao Beach Resort & Spa, Bangtao Beach",
+          "label": "Best Western Premier Bangtao Beach Resort & Spa, Bangtao Beach",
+          "tagid": "hotel:mhid.rjqvsvh",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.3zarddm",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Emerald Beach Resort & Spa, Khao Lak",
+          "label": "Emerald Beach Resort & Spa, Khao Lak",
+          "tagid": "hotel:mhid.3zarddm",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.4Lu7zff",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Hilton Phuket Arcadia Resort & Spa, Karon Beach",
+          "label": "Hilton Phuket Arcadia Resort & Spa, Karon Beach",
+          "tagid": "hotel:mhid.4Lu7zff",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.6si2ijL",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "San Antonio Hotel & Spa, St Pauls Bay",
+          "label": "San Antonio Hotel & Spa, St Pauls Bay",
+          "tagid": "hotel:mhid.6si2ijL",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.7ndajp3",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Kata Beach Resort & Spa, Kata Beach",
+          "label": "Kata Beach Resort & Spa, Kata Beach",
+          "tagid": "hotel:mhid.7ndajp3",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.bhn01md",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Bull Hotel Dorado Beach & Spa, Arguineguín",
+          "label": "Bull Hotel Dorado Beach & Spa, Arguineguín",
+          "tagid": "hotel:mhid.bhn01md",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.du4rjim",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Dolmen Resort Hotel & Spa, St Pauls Bay",
+          "label": "Dolmen Resort Hotel & Spa, St Pauls Bay",
+          "tagid": "hotel:mhid.du4rjim",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.eh395qf",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Barut Hotel Lara Resort Spa & Suites, Antalya",
+          "label": "Barut Hotel Lara Resort Spa & Suites, Antalya",
+          "tagid": "hotel:mhid.eh395qf",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.y8tc1yz",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "The O Hotel & Spa, Nordlige Goa",
+          "label": "The O Hotel & Spa, Nordlige Goa",
+          "tagid": "hotel:mhid.y8tc1yz",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.wt2hrpq",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Tropical Princess Beach Resort & Spa, Punta Cana",
+          "label": "Tropical Princess Beach Resort & Spa, Punta Cana",
+          "tagid": "hotel:mhid.wt2hrpq",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.ty42kih",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Sonesta Great Bay Beach Resort & Spa, Philipsburg",
+          "label": "Sonesta Great Bay Beach Resort & Spa, Philipsburg",
+          "tagid": "hotel:mhid.ty42kih",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.p0asmia",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Adriana Hvar Spa Hotel, Hvar by",
+          "label": "Adriana Hvar Spa Hotel, Hvar by",
+          "tagid": "hotel:mhid.p0asmia",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.mronaf3",
+        "_score": 1.0593619,
+        "_source": {
+          "name": "Renaissance Antalya Beach Resort & Spa, Beldibi",
+          "label": "Renaissance Antalya Beach Resort & Spa, Beldibi",
+          "tagid": "hotel:mhid.mronaf3",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.4wiwx45",
+        "_score": 0.9643789,
+        "_source": {
+          "name": "Marina El Cid Spa Beach Resort, Puerto Morelos",
+          "label": "Marina El Cid Spa Beach Resort, Puerto Morelos",
+          "tagid": "hotel:mhid.4wiwx45",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.ugs4gqk",
+        "_score": 0.9643789,
+        "_source": {
+          "name": "Grand Palladium Punta Cana Resort & Spa, Punta Cana",
+          "label": "Grand Palladium Punta Cana Resort & Spa, Punta Cana",
+          "tagid": "hotel:mhid.ugs4gqk",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.un0q4rf",
+        "_score": 0.9643789,
+        "_source": {
+          "name": "Grand Palladium Palace Ibiza Resort & Spa, Playa d´en Bossa",
+          "label": "Grand Palladium Palace Ibiza Resort & Spa, Playa d´en Bossa",
+          "tagid": "hotel:mhid.un0q4rf",
+          "context": "dk:da"
+        }
+      }
+    ]
+  }
+}
