@@ -34,6 +34,15 @@ describe('store', () => {
       done();
     });
   });
+  it('calls callback with error if S3.getObject fails', (done) => {
+    AWS.S3.prototype.getObject.actions = [];
+    AWS.S3.prototype.getObject.callbackWith(new Error('test error'));
+    store.get('geo:geonames.10062607', (err, result) => {
+      assert(err);
+      assert.equal(err.message, 'test error');
+      done();
+    });
+  });
   describe('object key generation', () => {
     it('geo:geonames.10062607', (done) => {
       store.get('geo:geonames.10062607', () => {
