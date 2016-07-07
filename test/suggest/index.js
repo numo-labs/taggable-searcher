@@ -26,27 +26,27 @@ describe('suggest', () => {
       simple.mock(AWS, 'EnvironmentCredentials', () => {});
     });
     it('returns a function', () => {
-      const suggest = taggy.suggest.init({ endpoint: 'test endpoint', region: 'eu-west-1' });
+      const suggest = taggy.suggest({ endpoint: 'test endpoint', region: 'eu-west-1' });
       assert.equal(typeof suggest, 'function');
     });
     it('initialises an elastic search client with the endpoint provided', () => {
-      taggy.suggest.init({ endpoint: 'test endpoint', region: 'eu-west-1' });
+      taggy.suggest({ endpoint: 'test endpoint', region: 'eu-west-1' });
       assert(ElasticSearch.Client.called);
       assert.equal(ElasticSearch.Client.lastCall.args[0].hosts, 'test endpoint');
     });
     it('sets the AWS region if provided', () => {
-      taggy.suggest.init({ endpoint: 'test endpoint', region: 'eu-west-1' });
+      taggy.suggest({ endpoint: 'test endpoint', region: 'eu-west-1' });
       assert(ElasticSearch.Client.called);
       assert.deepEqual(ElasticSearch.Client.lastCall.args[0].amazonES.region, 'eu-west-1');
     });
     it('uses credentials from options if provided', () => {
-      taggy.suggest.init({ endpoint: 'test endpoint', region: 'eu-west-1', credentials: { accessKey: 'abc123', secretKey: 'def456' } });
+      taggy.suggest({ endpoint: 'test endpoint', region: 'eu-west-1', credentials: { accessKey: 'abc123', secretKey: 'def456' } });
       assert(ElasticSearch.Client.called);
       assert.equal(ElasticSearch.Client.lastCall.args[0].amazonES.accessKey, 'abc123');
       assert.equal(ElasticSearch.Client.lastCall.args[0].amazonES.secretKey, 'def456');
     });
     it('uses local credentials from AWS SDK if none are provided', () => {
-      taggy.suggest.init({ endpoint: 'test endpoint', region: 'eu-west-1' });
+      taggy.suggest({ endpoint: 'test endpoint', region: 'eu-west-1' });
       assert(ElasticSearch.Client.called);
       assert(AWS.EnvironmentCredentials.called);
       assert.equal(AWS.EnvironmentCredentials.lastCall.args[0], 'AWS');
@@ -54,12 +54,12 @@ describe('suggest', () => {
     });
     it('throws if no endpoint is defined', () => {
       assert.throws(() => {
-        taggy.suggest.init({ region: 'eu-west-1' });
+        taggy.suggest({ region: 'eu-west-1' });
       });
     });
     it('throws if no region is defined', () => {
       assert.throws(() => {
-        taggy.suggest.init({ endpoint: 'endpoint' });
+        taggy.suggest({ endpoint: 'endpoint' });
       });
     });
   });
@@ -67,7 +67,7 @@ describe('suggest', () => {
   describe('suggest', () => {
     let suggest;
     beforeEach(() => {
-      suggest = taggy.suggest.init({ endpoint: 'test endpoint', region: 'eu-west-1' });
+      suggest = taggy.suggest({ endpoint: 'test endpoint', region: 'eu-west-1' });
     });
     it('calls to elasticsearch search method', (done) => {
       suggest({ text: 'spa' }, () => {

@@ -4,7 +4,7 @@ We use _suggest_ for the auto-completion input fields in isearch-ui and taggy-ui
 # Usage
 ```js
 const taggy = require('taggable-searcher');
-const suggest = taggy.suggest.init({
+const suggest = taggy.suggest({
   endpoint: 'ELASTICSEARCH_ENDPOINT',
   region: 'eu-west-1'
 });
@@ -19,7 +19,7 @@ suggest({
 ```
 # API
 
-## init(options)
+## taggable-searcher#suggest(options)
 
 Creates a function which will query the elasticsearch endpoint provided.
 
