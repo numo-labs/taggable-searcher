@@ -5,7 +5,7 @@ var index = require('../index');
 describe('Integration: search.tile', function () {
   it('should find tiles based on the includedIn param', function (done) {
     var params = {
-      includedIn: ['geo:geonames.8199138'],
+      includedIn: ['tile:article.dk.19'],
       fastQuery: true,
       limit: 2
     };
