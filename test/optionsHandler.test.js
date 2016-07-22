@@ -19,7 +19,8 @@ describe('optionsHandler', function () {
       start: 15,
       size: 125,
       operator: 'or',
-      include: ['hotel']
+      include: ['hotel'],
+      activeOnly: false
     };
 
     var result = optionsHandler(options);
@@ -36,7 +37,8 @@ describe('optionsHandler', function () {
       text: 'Spa',
       operator: 'and',
       size: 10,
-      start: 0
+      start: 0,
+      activeOnly: false
     };
 
     var result = optionsHandler(options);
@@ -53,7 +55,8 @@ describe('optionsHandler', function () {
       text: 'Spa',
       operator: 'and',
       size: 10,
-      start: 0
+      start: 0,
+      activeOnly: false
     };
 
     var result = optionsHandler(options);
@@ -70,7 +73,8 @@ describe('optionsHandler', function () {
       text: 'Spa',
       operator: 'and',
       size: 10,
-      start: 0
+      start: 0,
+      activeOnly: false
     };
 
     var result = optionsHandler(options);
@@ -88,7 +92,8 @@ describe('optionsHandler', function () {
       operator: 'and',
       size: 10,
       start: 0,
-      include: ['single item']
+      include: ['single item'],
+      activeOnly: false
     };
 
     var result = optionsHandler(options);
@@ -106,7 +111,8 @@ describe('optionsHandler', function () {
       operator: 'and',
       size: 10,
       start: 0,
-      exclude: ['single item']
+      exclude: ['single item'],
+      activeOnly: false
     };
 
     var result = optionsHandler(options);
