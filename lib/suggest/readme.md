@@ -3,9 +3,12 @@ We use _suggest_ for the auto-completion input fields in isearch-ui and taggy-ui
 
 # Usage
 ```js
-var taggy = require('taggable-searcher');
-
-taggy.suggest({
+const taggy = require('taggable-searcher');
+const suggest = taggy.suggest({
+  endpoint: 'ELASTICSEARCH_ENDPOINT',
+  region: 'eu-west-1'
+});
+suggest({
   text: 'Spa',
   context: 'dk:da',
   include: 'hotel',
@@ -15,6 +18,37 @@ taggy.suggest({
 }, callback)
 ```
 # API
+
+## taggable-searcher#suggest(options)
+
+Creates a function which will query the elasticsearch endpoint provided.
+
+### returns
+Type: `function`
+
+A function to query elasticsearch for suggestions - documented below.
+
+### options
+#### endpoint
+Type: `string`
+
+Defines the endpoint of the elasticsearch service to be used.
+
+#### region
+Type: `string`
+
+Defines the AWS region of the elasticsearch service to be used.
+
+#### credentials [optional]
+Type: `object`
+
+##### properties
+* `accessKey`
+* `secretKey`
+
+Defines the credentials for accessing AWS elasticsearch instances. Optional - if not defined then the credentials will be loaded from the lambda by the AWS SDK.
+
+
 ## suggest([params], callback)
 ### params
 #### text
@@ -83,13 +117,3 @@ Specifies the maximum number of search hits to include in the response.
     }
 }
 ```
-
-# Environment variables
-In order for this to work we need to set up 1 environment variable _or_ initialize it manually before we use any function.
-
-## variables
-**CLOUDSEARCH_ENDPOINT** The cloudsearch endpoint
-
-## manually
-```js
-taggy.suggest.init('cloud search endpoint');
