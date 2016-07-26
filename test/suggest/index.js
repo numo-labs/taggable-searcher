@@ -2,7 +2,6 @@ const simple = require('simple-mock');
 const ElasticSearch = require('elasticsearch');
 const assert = require('assert');
 const uniq = require('lodash.uniq');
-const all = require('lodash.every');
 
 const suggest = require('../../').suggest;
 
@@ -57,6 +56,20 @@ describe('suggest', () => {
         done();
       });
     });
+    it('adds a `must_not` clause to query if exclude option is passed', (done) => {
+      suggest({ text: 'abc:def.ghi', exclude: 'hotel' }, () => {
+        const query = mockClient.search.lastCall.args[0].body.query.filtered.query.bool;
+        assert.deepEqual(query.must_not[0], { prefix: { tagid: 'hotel' } });
+        done();
+      });
+    });
+    it('adds a `should` sub-clause to `must` query if include option is passed', (done) => {
+      suggest({ text: 'abc:def.ghi', include: ['hotel', 'marketing'] }, () => {
+        const query = mockClient.search.lastCall.args[0].body.query.filtered.query.bool;
+        assert.deepEqual(query.must[1].bool.should, [{ prefix: { tagid: 'hotel' } }, { prefix: { tagid: 'marketing' } }]);
+        done();
+      });
+    });
   });
 
   describe('results', () => {
@@ -66,38 +79,6 @@ describe('suggest', () => {
           assert(!err);
           const ids = result.data.hits.hit.map(o => o.fields.tagid);
           assert.equal(ids.length, uniq(ids).length);
-          done();
-        });
-      });
-    });
-    describe('filtering', () => {
-      it('removes any results which match the type provided in `exclude` option', (done) => {
-        suggest({ text: 'spa', exclude: 'hotel' }, (err, result) => {
-          assert(!err);
-          const types = result.data.hits.hit
-            .map(o => o.fields.tagid)
-            .map(id => id.split(':')[0]);
-          assert(all(types, type => type !== 'hotel'));
-          done();
-        });
-      });
-      it('removes any results which do not match the type provided in `include` option', (done) => {
-        suggest({ text: 'spa', include: 'marketing' }, (err, result) => {
-          assert(!err);
-          const types = result.data.hits.hit
-            .map(o => o.fields.tagid)
-            .map(id => id.split(':')[0]);
-          assert(all(types, type => type === 'marketing'));
-          done();
-        });
-      });
-      it('supports an array as `include` option', (done) => {
-        suggest({ text: 'spa', include: ['marketing', 'geo'] }, (err, result) => {
-          assert(!err);
-          const types = result.data.hits.hit
-            .map(o => o.fields.tagid)
-            .map(id => id.split(':')[0]);
-          assert(all(types, type => (type === 'marketing' || type === 'geo')));
           done();
         });
       });
