@@ -83,6 +83,17 @@ describe('suggest', () => {
         });
       });
     });
+    describe('count', () => {
+      it('includes the total number of results, before pagination', (done) => {
+        mockClient.search.actions = [];
+        mockClient.search.callbackWith(null, require('./fixtures/paginated-result.json'));
+        suggest({ text: 'spa', size: 10 }, (err, result) => {
+          assert(!err);
+          assert.equal(result.data.hits.found, 80);
+          done();
+        });
+      });
+    });
   });
 
   describe('error handling', () => {
