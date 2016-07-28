@@ -1,0 +1,138 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 80,
+    "max_score": 6.0852137,
+    "hits": [
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:geo:geonames.2510769",
+        "_score": 6.0852137,
+        "_source": {
+          "name": "Spanien",
+          "label": "Spanien",
+          "tagid": "geo:geonames.2510769",
+          "context": "dk:da",
+          "active": true
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:geo:geonames.6946451",
+        "_score": 3.0145535,
+        "_source": {
+          "name": "Spanisches Dorf \"Pueblo Espanol\"",
+          "label": "Spanisches Dorf \"Pueblo Espanol\"",
+          "tagid": "geo:geonames.6946451",
+          "context": "dk:da",
+          "active": true
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:geo:geonames.6947342",
+        "_score": 2.3870134,
+        "_source": {
+          "name": "Spanisches Dorf \"Pueblo Espanol\"",
+          "label": "Spanisches Dorf \"Pueblo Espanol\"",
+          "tagid": "geo:geonames.6947342",
+          "context": "dk:da",
+          "active": true
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:marketing:term.spa",
+        "_score": 2.0091918,
+        "_source": {
+          "name": "Spa",
+          "label": "Spa & Relax",
+          "tagid": "marketing:term.spa",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.csnasp6",
+        "_score": 1.8652625,
+        "_source": {
+          "name": "Hotel Spa Villalba, Vilaflor",
+          "label": "Hotel Spa Villalba, Vilaflor",
+          "tagid": "hotel:mhid.csnasp6",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.sww35ky",
+        "_score": 1.8583529,
+        "_source": {
+          "name": "Kirini Suites & Spa, Oia",
+          "label": "Kirini Suites & Spa, Oia",
+          "tagid": "hotel:mhid.sww35ky",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.u7ptuee",
+        "_score": 1.8145988,
+        "_source": {
+          "name": "Elysium Resort & Spa, Faliraki",
+          "label": "Elysium Resort & Spa, Faliraki",
+          "tagid": "hotel:mhid.u7ptuee",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.8auu1n7",
+        "_score": 1.7179248,
+        "_source": {
+          "name": "Royalton Hicacos Resort & Spa, Varadero",
+          "label": "Royalton Hicacos Resort & Spa, Varadero",
+          "tagid": "hotel:mhid.8auu1n7",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.dtqqq2j",
+        "_score": 1.7179248,
+        "_source": {
+          "name": "Royal Island Resort & Spa, Maldiverne",
+          "label": "Royal Island Resort & Spa, Maldiverne",
+          "tagid": "hotel:mhid.dtqqq2j",
+          "context": "dk:da"
+        }
+      },
+      {
+        "_index": "taggy",
+        "_type": "taggy",
+        "_id": "dk:da:0:hotel:mhid.zxLhfat",
+        "_score": 1.7179248,
+        "_source": {
+          "name": "Royal Atlas Hotel & Spa, Agadir",
+          "label": "Royal Atlas Hotel & Spa, Agadir",
+          "tagid": "hotel:mhid.zxLhfat",
+          "context": "dk:da"
+        }
+      }
+    ]
+  }
+}
