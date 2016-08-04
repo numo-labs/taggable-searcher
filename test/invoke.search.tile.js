@@ -29,4 +29,16 @@ describe('Integration: search.tile', function () {
       done();
     });
   });
+  it('should find results for Svømmeskole på Sunwing', function (done) {
+    this.timeout(4000);
+    var params = {
+      includedIn: ['tile:article.dk.121'],
+      fastQuery: true
+    };
+    index.search.tile(params, function (err, result) {
+      if (err) return done(err);
+      assert(result.data.length > 0);
+      done();
+    });
+  });
 });
